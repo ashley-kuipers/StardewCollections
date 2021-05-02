@@ -7,7 +7,8 @@ I'm still new to python, haven't learned how to create a full executable yet, bu
 ## How it works
 Here are some screenshots to explain the basics. Full documentation will follow.
 
-![Main Info](maininfo.png)
+![Main Info](maininfo.png | width=200)
 
-Different pages show different info when you hover, and different backgrounds mean different things.
-![Fish Page](fishpage.png)
+A Few pages have extra functionality:
+
+![Fish Page](fishpage.png | width=200)
