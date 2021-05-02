@@ -9,6 +9,6 @@ Here are some screenshots to explain the basics. Full documentation will follow.
 
 <img src="maininfo.png" width="700">
 
-A Few pages have extra functionality:
+A Few pages have extra functionality including the fish page...
 
-![Fish Page](fishpage.png | width=200)
+<img src="fishpage.png" width="700">
