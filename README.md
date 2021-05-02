@@ -7,7 +7,7 @@ I'm still new to python, haven't learned how to create a full executable yet, bu
 ## How it works
 Here are some screenshots to explain the basics. Full documentation will follow.
 
-![Main Info](maininfo.png | width=200)
+<img src="maininfo.png" width="100" height="100">
 
 A Few pages have extra functionality:
 
