@@ -1,4 +1,4 @@
-# StardewCollections1.0
+# StardewCollections
 Ever get annoyed at constantly opening the menu while trying to finish the Stardew Valley Collections? Keep this program open on a second monitor and keep track of your progress.  When you are done for the day, hit the save button to save your progress to the csv.  
 
 ## Implementation
@@ -12,3 +12,7 @@ Here are some screenshots to explain the basics. Full documentation will follow.
 A Few pages have extra functionality including the fish page...
 
 <img src="fishpage.png" width="700">
+
+and the Villager page
+
+<img src="villagerpage.png" width="700">
