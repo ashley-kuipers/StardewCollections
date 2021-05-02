@@ -9,5 +9,5 @@ Here are some screenshots to explain the basics. Full documentation will follow.
 
 ![Main Info](maininfo.png)
 
-
+Different pages show different info when you hover, and different backgrounds mean different things.
 ![Fish Page](fishpage.png)
