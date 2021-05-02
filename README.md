@@ -8,3 +8,6 @@ I'm still new to python, haven't learned how to create a full executable yet, bu
 Here are some screenshots to explain the basics. Full documentation will follow.
 
 ![Main Info](maininfo.png)
+
+
+![Fish Page](fishpage.png)
