@@ -56,12 +56,12 @@ class Item:
         # create buttons
         self.total_buttons = []
         self.new_button = Button(frame, image=self.image, bg=self.button_bg, highlightthickness=0,
-                                 activebackground=DARKER_BACKGROUND, command=self.change_background, width=60,
-                                 height=60)
+                                 activebackground=DARKER_BACKGROUND, command=self.change_background, width=63,
+                                 height=63)
 
         # checked if item is checked & adjust background
-        self.checked = checked[self.item_name]
-        if self.checked:
+        self.check = checked[self.item_name]
+        if self.check:
             self.change_background()        
 
         # add buttons to screen
@@ -192,13 +192,13 @@ class Item:
         if self.button_bg != DARKER_BACKGROUND:
             self.new_button.config(bg=DARKER_BACKGROUND, relief="sunken")
             self.button_bg = DARKER_BACKGROUND
-            self.checked = True
+            self.check = True
             checked[self.item_name] = True
 
         else:
             self.new_button.config(bg=BACKGROUND, relief="raised")
             self.button_bg = BACKGROUND
-            self.checked = False
+            self.check = False
             checked[self.item_name] = False
 
             self.fish_background()
@@ -269,3 +269,10 @@ class Item:
                     self.new_button.config(bg=TWO_GIFTS_BG, relief="raised")
                 elif self.button_bg == DARKER_BACKGROUND:
                         pass
+
+    def reset_background(self):
+        self.check = False
+        self.new_button.config(bg=BACKGROUND, relief="raised")
+        self.button_bg = BACKGROUND
+        checked[self.item_name] = False
+        self.fish_background()

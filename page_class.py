@@ -17,22 +17,38 @@ class Page:
         self.information_frame = Frame(master, bg=DARKER_BACKGROUND, width=250, height=100)
         self.information_frame.grid(row=0, column=1, sticky="news")
 
+        self.buttons_frame = buttons_frame
+
         self.dict = dict
         self.page = page
 
         # create page buttons
-        self.button = Button(buttons_frame, text=page, command=self.up, width=11, bg=DARKER_BACKGROUND, font=BUTTON_FONT, activebackground=DARKER_BACKGROUND)
+        self.button = Button(self.buttons_frame, text=page, command=self.up, width=11, bg=DARKER_BACKGROUND, font=BUTTON_FONT, activebackground=DARKER_BACKGROUND)
 
+        self.widgets=[]
         # filling with widgets
         for item in self.dict:
             if item['page'] == page:
                 # create widgets using the item class
                 new_item = Item(item, self.frame, self.information_frame)
-
+                self.widgets.append(new_item)
                 # unless page == villager, then make villager subclass?
                 # unless page == Fish, make fish subclass?
+
+        self.reset_button = Button(self.buttons_frame, text=f"Reset Ship 1", bg=DARKER_BACKGROUND, width=16,
+                                   font=("Courier", 14, "bold"), activebackground=DARKER_BACKGROUND,
+                                   command=self.reset)
+        self.reset_button.grid(column=10, row=0, sticky="NEWS", rowspan=2)
 
     def up(self):
         self.frame.tkraise()
         self.information_frame.tkraise()
+        self.reset_button = Button(self.buttons_frame, text=f"Reset {self.page}", bg=DARKER_BACKGROUND, width=16,
+                                   font=("Courier", 14, "bold"), activebackground=DARKER_BACKGROUND,
+                                   command=self.reset)
+        self.reset_button.grid(column=10, row=0, sticky="NEWS", rowspan=2)
+
+    def reset(self):
+        for item in self.widgets:
+            item.reset_background()
 

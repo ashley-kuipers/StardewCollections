@@ -5,7 +5,7 @@ from tkinter import messagebox
 from item_class import checked, total_hearts, total_gifts
 from page_class import Page, DARKER_BACKGROUND
 
-SAVE_FONT = ("Courier", 15, "bold")
+SAVE_FONT = ("Courier", 14, "bold")
 
 window = Tk()
 window.title("Stardew Collections")
@@ -54,8 +54,10 @@ def save():
     messagebox.showinfo(title="Saved", message="You have saved successfully!")
 
 
-save_button = Button(buttons_frame, text="Save Progress", bg=DARKER_BACKGROUND, command=save, width=20, font=SAVE_FONT, activebackground=DARKER_BACKGROUND)
+save_button = Button(buttons_frame, text="Save", bg=DARKER_BACKGROUND, command=save, width=9, font=SAVE_FONT, activebackground=DARKER_BACKGROUND)
 save_button.grid(column=9, row=0, sticky="NEWS", rowspan=2)
+
+
 
 window.mainloop()
 
